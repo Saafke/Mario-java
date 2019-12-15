@@ -1,8 +1,10 @@
 import agents.MarioAgent;
 import engine.core.*;
+import engine.helper.MarioTimer;
 import levelGenerators.MarioLevelGenerator;
 
 import static engine.helper.RunUtils.*;
+import levelGenerators.groupx.*;
 
 @SuppressWarnings("ConstantConditions")
 public class PlayLevel {
@@ -11,8 +13,13 @@ public class PlayLevel {
         // Run settings:
         boolean visuals = true;  // Set to false if no visuals required for this run.
         boolean generateDifferentLevels = false;  // If true, each play will be a different generated level.
-        String levelFile = "levels/original/lvl-1.txt";  // null;
-        MarioLevelGenerator generator = new levelGenerators.notch.LevelGenerator();  // null;
+        String levelFile = null; //"levels/original/lvl-1.txt";  // null;
+        //MarioLevelGenerator generator = new levelGenerators.notch.LevelGenerator();  // null;
+
+        LevelGenerator generator = new levelGenerators.groupx.LevelGenerator();
+        String level = generator.getSlicedLevel(new MarioLevelModel(150, 16),
+                new MarioTimer(5 * 60 * 60 * 1000));
+        //String level = getLevel(levelFile, generator);
 
         // Note: either levelFile or generator must be non-null. If neither is null, levelFile takes priority.
         if (levelFile == null && generator == null) {
@@ -24,7 +31,7 @@ public class PlayLevel {
         MarioAgent agent = new agents.robinBaumgarten.Agent();
 
         // Grab a level from file, found in directory "levels/" or pass null to generate a level automatically.
-        String level = getLevel(levelFile, generator);
+        //String level = getLevel(levelFile, generator);
 
         // Display the entire level.
 //        game.buildWorld(level, 1);
@@ -34,10 +41,10 @@ public class PlayLevel {
         while (playAgain == 0) {  // 0 - play again! 1 - end execution.
 
             // Play the level, either as a human ...
-            MarioResult result = game.playGame(level, 200, 0);
+            //MarioResult result = game.playGame(level, 200, 0);
 
             // ... Or with an AI agent
-//            MarioResult result = game.runGame(agent, level, 20, 0, visuals);
+            MarioResult result = game.runGame(agent, level, 20, 0, visuals);
 
             // Print the results of the game
             System.out.println(result.getGameStatus().toString());

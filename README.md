@@ -1,12 +1,24 @@
+### Mario Level Generator
+
+This repository contains a level generator for Mario. It generates levels via an unigram trained on original mario
+levels whereafter it mutates the level via evolutionary optimisation on a simulation-based evaluation. Find the code in
+'src/levelGenerators/groupx'.
+
+#### Queen Mary
+This was a group assignment for the course AI in games at Queen Mary University of London.
+
+#### Example of generated level played by Robin Baumgarten A* agent.
 <p align="center">
 <a href="#features">Features</a> &mdash; <a href="#use">How To Use</a> &mdash; <a href="#papers">Related Papers</a> &mdash; <a href="#missing">Missing Features</a> &mdash; <a href="#copyrights">Copyrights</a>
 </p>
 <p align="center">
-<img width="300" height="300" alt="Robin Baumgarten A* agent" src="https://raw.githubusercontent.com/amidos2006/Mario-AI-Framework/master/img/frameworkAD.gif">
+<img width="300" height="300" alt="Robin Baumgarten A* agent" src="./img/mario.gif">
 </p>
 <p align="center">
   <b>Current Framework Version: 0.8.0</b>
 </p>
+
+#### Original framework README:
 
 The Mario AI framework is a framework for using AI methods with a version of Super Mario Bros.
 
