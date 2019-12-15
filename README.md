@@ -8,7 +8,7 @@ levels whereafter it mutates the level via evolutionary optimisation on a simula
 This was a group assignment for the course AI in games at Queen Mary University of London.
 
 #### Example of generated level played by Robin Baumgarten A* agent.
-![Generated Mario Level](img/mario.gif)
+![Generated Mario Level](/img/mario.gif)
 
 #### Original framework README:
 
