@@ -12,7 +12,7 @@ This was a group assignment for the course AI in games at Queen Mary University 
 <a href="#features">Features</a> &mdash; <a href="#use">How To Use</a> &mdash; <a href="#papers">Related Papers</a> &mdash; <a href="#missing">Missing Features</a> &mdash; <a href="#copyrights">Copyrights</a>
 </p>
 <p align="center">
-<img width="300" height="300" alt="Robin Baumgarten A* agent" src="./img/mario.gif">
+<img width="300" height="300" alt="Robin Baumgarten A* agent" src="img/mario.gif">
 </p>
 <p align="center">
   <b>Current Framework Version: 0.8.0</b>
